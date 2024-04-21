@@ -1,0 +1,36 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="TestStep" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="TestStep" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="WordFinderTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestStep.WordFinderTests.FindWord_WordDoesNotExist_ReturnsFalse" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="FindWord_WordDoesNotExist_ReturnsFalse" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="TestStep.WordFinderTests.FindWord_WordExists_ReturnsTrue" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="FindWord_WordExists_ReturnsTrue" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
