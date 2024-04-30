@@ -7,26 +7,41 @@ class Program
         string sentence = "Съешь ещё этих мягких французских булок, да выпей же чаю.";
 
         WordFinder wordFinder = new WordFinder();
+        TextStatistics textStatistics = new TextStatistics();
 
         while (true)
         {
-            Console.WriteLine("Введите слово для поиска (для выхода введите 'exit'):");
-            string searchWord = Console.ReadLine();
+            Console.WriteLine("Выберите действие:");
+            Console.WriteLine("1. Поиск слова");
+            Console.WriteLine("2. Получение статистики текста");
+            Console.WriteLine("3. Выход\n");
+            string choice = Console.ReadLine();
 
-            if (searchWord.ToLower() == "exit")
+            switch (choice)
             {
-                break;
-            }
-
-            bool wordFound = wordFinder.FindWord(sentence, searchWord);
-
-            if (wordFound)
-            {
-                Console.WriteLine($"Слово '{searchWord}' найдено в предложении.\n");
-            }
-            else
-            {
-                Console.WriteLine($"Слово '{searchWord}' не найдено в предложении.\n");
+                case "1":
+                    Console.WriteLine("Введите слово для поиска:");
+                    string searchWord = Console.ReadLine();
+                    bool wordFound = wordFinder.FindWord(sentence, searchWord);
+                    if (wordFound)
+                    {
+                        Console.WriteLine($"Слово '{searchWord}' найдено в предложении.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Слово '{searchWord}' не найдено в предложении.\n");
+                    }
+                    break;
+                case "2":
+                    Console.WriteLine($"Количество слов: {textStatistics.CountWords(sentence)}");
+                    Console.WriteLine($"Количество символов: {textStatistics.CountCharacters(sentence)}");
+                    Console.WriteLine($"Количество предложений: {textStatistics.CountSentences(sentence)}");
+                    break;
+                case "3":
+                    return;
+                default:
+                    Console.WriteLine("Неверный выбор. Попробуйте еще раз.");
+                    break;
             }
         }
     }
@@ -47,5 +62,24 @@ public class WordFinder
         }
 
         return false;
+    }
+}
+
+public class TextStatistics
+{
+    public int CountWords(string text)
+    {
+        return text.Split(new char[] { ' ', ',', '.' }, StringSplitOptions.RemoveEmptyEntries).Length;
+    }
+
+    public int CountCharacters(string text)
+    {
+        return text.Length;
+    }
+
+    public int CountSentences(string text)
+    {
+        string[] sentences = text.Split(new char[] { '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
+        return sentences.Length;
     }
 }

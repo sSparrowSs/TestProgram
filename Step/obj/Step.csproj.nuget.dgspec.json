@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mashina\\source\\repos\\Step\\Step.csproj": {}
+    "C:\\Users\\Mashina\\Documents\\GitHub\\TestProgram\\Step\\Step.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mashina\\source\\repos\\Step\\Step.csproj": {
+    "C:\\Users\\Mashina\\Documents\\GitHub\\TestProgram\\Step\\Step.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mashina\\source\\repos\\Step\\Step.csproj",
+        "projectUniqueName": "C:\\Users\\Mashina\\Documents\\GitHub\\TestProgram\\Step\\Step.csproj",
         "projectName": "Step",
-        "projectPath": "C:\\Users\\Mashina\\source\\repos\\Step\\Step.csproj",
+        "projectPath": "C:\\Users\\Mashina\\Documents\\GitHub\\TestProgram\\Step\\Step.csproj",
         "packagesPath": "C:\\Users\\Mashina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mashina\\source\\repos\\Step\\obj\\",
+        "outputPath": "C:\\Users\\Mashina\\Documents\\GitHub\\TestProgram\\Step\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
